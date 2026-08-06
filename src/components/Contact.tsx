@@ -50,93 +50,95 @@ export const Contact: React.FC = () => {
         {/* Two-Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch max-w-5xl mx-auto">
 
-          {/* Left Column: Contact Information Cards */}
-          <div className="flex flex-col gap-6 justify-between">
-            {/* Card 1: Email */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-              className="bg-white border border-gray-200/90 rounded-[20px] p-6 sm:p-8 shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 ease-out flex items-center justify-between group"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 text-[#2563EB] flex items-center justify-center shrink-0 group-hover:bg-[#2563EB] group-hover:text-white transition-colors duration-300">
-                  <Mail className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="text-xs font-mono text-gray-400 uppercase tracking-wider mb-1">Email</div>
-                  <a
-                    href={`mailto:${PERSONAL_INFO.email}`}
-                    className="text-base sm:text-lg font-semibold text-gray-900 hover:text-[#2563EB] transition-colors"
-                  >
-                    {PERSONAL_INFO.email}
-                  </a>
-                </div>
-              </div>
+          {/* Left Column: Contact Information Outer Box */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+            className="bg-white border border-gray-200/90 rounded-[20px] p-6 sm:p-10 shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 ease-out flex flex-col justify-between gap-6"
+          >
+            <div>
+              <h3 className="font-heading text-2xl font-bold text-gray-900 tracking-tight mb-6">
+                Contact Details
+              </h3>
 
-              <button
-                onClick={handleCopyEmail}
-                aria-label="Copy email to clipboard"
-                className="p-3 rounded-xl text-gray-400 hover:text-[#2563EB] hover:bg-blue-50 border border-transparent hover:border-blue-100 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] cursor-pointer shrink-0 ml-4"
-                title="Copy Email"
-              >
-                <motion.div
-                  key={copiedField === 'email' ? 'check' : 'copy'}
-                  initial={{ rotate: -90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  {copiedField === 'email' ? (
-                    <Check className="w-5 h-5 text-emerald-600" />
-                  ) : (
-                    <Copy className="w-5 h-5" />
-                  )}
-                </motion.div>
-              </button>
-            </motion.div>
-
-            {/* Card 2: Location */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.1 }}
-              className="bg-white border border-gray-200/90 rounded-[20px] p-6 sm:p-8 shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 ease-out flex items-center justify-between group"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 text-[#2563EB] flex items-center justify-center shrink-0 group-hover:bg-[#2563EB] group-hover:text-white transition-colors duration-300">
-                  <MapPin className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="text-xs font-mono text-gray-400 uppercase tracking-wider mb-1">Location</div>
-                  <div className="text-base sm:text-lg font-semibold text-gray-900">
-                    {PERSONAL_INFO.location}
+              <div className="flex flex-col gap-5">
+                {/* Row 1: Email */}
+                <div className="p-4 sm:p-5 bg-[#F8F9FB] border border-gray-200/80 rounded-2xl flex items-center justify-between group hover:border-blue-200 transition-colors">
+                  <div className="flex items-center gap-4">
+                    <div className="w-11 h-11 rounded-xl bg-white border border-gray-200 text-[#2563EB] flex items-center justify-center shrink-0 shadow-2xs group-hover:bg-[#2563EB] group-hover:text-white transition-colors duration-300">
+                      <Mail className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="text-xs font-mono text-gray-400 uppercase tracking-wider mb-0.5">Email</div>
+                      <a
+                        href={`mailto:${PERSONAL_INFO.email}`}
+                        className="text-sm sm:text-base font-semibold text-gray-900 hover:text-[#2563EB] transition-colors"
+                      >
+                        {PERSONAL_INFO.email}
+                      </a>
+                    </div>
                   </div>
+
+                  <button
+                    onClick={handleCopyEmail}
+                    aria-label="Copy email to clipboard"
+                    className="p-2.5 rounded-xl text-gray-400 hover:text-[#2563EB] hover:bg-white border border-transparent hover:border-gray-200 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] cursor-pointer shrink-0 ml-2"
+                    title="Copy Email"
+                  >
+                    <motion.div
+                      key={copiedField === 'email' ? 'check' : 'copy'}
+                      initial={{ rotate: -90, opacity: 0 }}
+                      animate={{ rotate: 0, opacity: 1 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {copiedField === 'email' ? (
+                        <Check className="w-4 h-4 text-emerald-600" />
+                      ) : (
+                        <Copy className="w-4 h-4" />
+                      )}
+                    </motion.div>
+                  </button>
+                </div>
+
+                {/* Row 2: Location */}
+                <div className="p-4 sm:p-5 bg-[#F8F9FB] border border-gray-200/80 rounded-2xl flex items-center justify-between group hover:border-blue-200 transition-colors">
+                  <div className="flex items-center gap-4">
+                    <div className="w-11 h-11 rounded-xl bg-white border border-gray-200 text-[#2563EB] flex items-center justify-center shrink-0 shadow-2xs group-hover:bg-[#2563EB] group-hover:text-white transition-colors duration-300">
+                      <MapPin className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="text-xs font-mono text-gray-400 uppercase tracking-wider mb-0.5">Location</div>
+                      <div className="text-sm sm:text-base font-semibold text-gray-900">
+                        {PERSONAL_INFO.location}
+                      </div>
+                    </div>
+                  </div>
+
+                  <button
+                    onClick={handleCopyLocation}
+                    aria-label="Copy location to clipboard"
+                    className="p-2.5 rounded-xl text-gray-400 hover:text-[#2563EB] hover:bg-white border border-transparent hover:border-gray-200 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] cursor-pointer shrink-0 ml-2"
+                    title="Copy Location"
+                  >
+                    <motion.div
+                      key={copiedField === 'location' ? 'check' : 'copy'}
+                      initial={{ rotate: -90, opacity: 0 }}
+                      animate={{ rotate: 0, opacity: 1 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {copiedField === 'location' ? (
+                        <Check className="w-4 h-4 text-emerald-600" />
+                      ) : (
+                        <Copy className="w-4 h-4" />
+                      )}
+                    </motion.div>
+                  </button>
                 </div>
               </div>
-
-              <button
-                onClick={handleCopyLocation}
-                aria-label="Copy location to clipboard"
-                className="p-3 rounded-xl text-gray-400 hover:text-[#2563EB] hover:bg-blue-50 border border-transparent hover:border-blue-100 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] cursor-pointer shrink-0 ml-4"
-                title="Copy Location"
-              >
-                <motion.div
-                  key={copiedField === 'location' ? 'check' : 'copy'}
-                  initial={{ rotate: -90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  {copiedField === 'location' ? (
-                    <Check className="w-5 h-5 text-emerald-600" />
-                  ) : (
-                    <Copy className="w-5 h-5" />
-                  )}
-                </motion.div>
-              </button>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
 
           {/* Right Column: Action Card */}
           <motion.div
