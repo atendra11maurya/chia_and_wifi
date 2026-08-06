@@ -28,9 +28,10 @@ export const Certifications: React.FC = () => {
               key={cert.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -6 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="group bg-[#F8F9FB] border border-gray-200/90 rounded-[24px] p-8 sm:p-10 flex flex-col justify-between hover:border-[#0F62FE]/50 hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300 ease-out cursor-pointer"
+              className="group bg-[#F8F9FB] border border-gray-200/90 rounded-[24px] p-8 sm:p-10 flex flex-col justify-between hover:border-[#0F62FE]/50 hover:shadow-lg transition-all duration-300 ease-out cursor-pointer"
             >
               <div>
                 {/* Header Icon */}

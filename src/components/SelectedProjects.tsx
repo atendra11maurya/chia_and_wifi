@@ -32,9 +32,10 @@ export const SelectedProjects: React.FC = () => {
               key={proj.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -6 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="bg-[#F8F9FB] border border-gray-200 rounded-[24px] p-6 sm:p-8 flex flex-col justify-between hover:border-[#0F62FE]/50 hover:-translate-y-1.5 hover:shadow-md transition-all duration-300 ease-out group cursor-pointer"
+              className="bg-[#F8F9FB] border border-gray-200 rounded-[24px] p-6 sm:p-8 flex flex-col justify-between hover:border-[#0F62FE]/50 hover:shadow-md transition-all duration-300 ease-out group cursor-pointer"
             >
               <div>
                 {/* Top Badges Bar */}

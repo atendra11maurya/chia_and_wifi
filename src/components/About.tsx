@@ -49,9 +49,10 @@ export const About: React.FC = () => {
                 key={pillar.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -6 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="bg-[#F8F9FB] border border-gray-200/80 rounded-2xl p-6 hover:border-[#0F62FE]/40 hover:-translate-y-1.5 hover:shadow-md transition-all duration-300 ease-out flex flex-col justify-between cursor-pointer"
+                className="bg-[#F8F9FB] border border-gray-200/80 rounded-2xl p-6 hover:border-[#0F62FE]/40 hover:shadow-md transition-all duration-300 ease-out flex flex-col justify-between cursor-pointer"
               >
                 <div>
                   <div className="w-10 h-10 rounded-xl bg-[#EFF4FE] text-[#0F62FE] flex items-center justify-center mb-5">

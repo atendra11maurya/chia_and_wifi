@@ -28,9 +28,10 @@ export const Education: React.FC = () => {
               key={edu.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -6 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="group bg-white border border-gray-200 rounded-[24px] p-6 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-md hover:-translate-y-1.5 hover:border-[#0F62FE]/40 transition-all duration-300 ease-out cursor-pointer"
+              className="group bg-white border border-gray-200 rounded-[24px] p-6 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-[#0F62FE]/40 transition-all duration-300 ease-out cursor-pointer"
             >
               <div>
                 {/* Header Icon & Degree */}

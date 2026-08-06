@@ -27,12 +27,13 @@ export const CareerTimeline: React.FC = () => {
               key={item.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -6 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="relative group"
+              className="relative group cursor-pointer"
             >
               {/* Card Container */}
-              <div className="bg-[#F8F9FB] border border-gray-200/90 rounded-[20px] p-6 sm:p-8 shadow-xs hover:shadow-md hover:-translate-y-1.5 hover:border-[#0F62FE]/40 transition-all duration-300 ease-out">
+              <div className="bg-[#F8F9FB] border border-gray-200/90 rounded-[20px] p-6 sm:p-8 shadow-xs hover:shadow-md hover:border-[#0F62FE]/40 transition-all duration-300 ease-out">
 
                 {/* Top Row Header */}
                 <div className="flex flex-wrap items-start justify-between gap-4 mb-4 pb-4 border-b border-gray-100">
