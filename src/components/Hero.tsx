@@ -16,14 +16,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
         <div className="absolute inset-0 silicon-grid-pattern opacity-60 pointer-events-none" />
 
         {/* ========== DESKTOP: Full-Height Left Portrait (hidden on mobile) ========== */}
-        <div className="absolute top-16 md:top-20 bottom-0 left-0 w-1/2 max-w-[650px] pointer-events-none z-0 overflow-hidden hidden lg:block">
+        <div className="absolute top-16 md:top-20 bottom-0 left-0 w-1/2 max-w-[540px] pointer-events-none z-0 overflow-hidden hidden lg:block">
           <img
             src="/avinash_maurya.jpg"
             alt="Avinash Maurya"
             className="w-full h-full object-cover object-[center_35%] scale-x-[-1] opacity-100"
           />
-          {/* Soft Right Edge Blend for Smooth Section Transition */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#F0F4F8]" />
+          {/* Soft Right Edge Blend covering Gemini watermark star */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent 25% via-[#F0F4F8]/90 60% to-[#F0F4F8]" />
         </div>
 
         {/* Decorative Alignment Overlay Marks */}
@@ -91,11 +91,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
 
               {/* Key Quick Badge Tags */}
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 md:gap-4 text-sm md:text-base font-semibold text-slate-800 mt-2">
-                <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/95 border border-white/40 shadow-xl hover:bg-white hover:scale-105 transition-all duration-300">
+                <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/95 border border-white/40 shadow-xl hover:bg-white hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 ease-out">
                   <Cpu className="w-4 h-4 md:w-5 md:h-5 text-blue-600" />
                   <span>Samsung Semiconductor India R&D Centre</span>
                 </span>
-                <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/95 border border-white/40 shadow-xl hover:bg-white hover:scale-105 transition-all duration-300">
+                <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/95 border border-white/40 shadow-xl hover:bg-white hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 ease-out">
                   <Award className="w-4 h-4 md:w-5 md:h-5 text-blue-600" />
                   <span>M.Tech Microelectronics</span>
                 </span>
@@ -112,9 +112,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
           {/* Get In Touch Button */}
           <button
             onClick={onOpenContact}
-            className="w-full sm:w-auto min-w-[260px] sm:min-w-[300px] inline-flex items-center justify-center gap-3.5 px-8 sm:px-12 py-5 sm:py-6 text-lg sm:text-xl font-bold text-white bg-gradient-to-r from-[#0F62FE] to-[#1D4ED8] rounded-2xl sm:rounded-[20px] shadow-[0_14px_32px_-6px_rgba(15,98,254,0.45)] hover:shadow-[0_22px_44px_-6px_rgba(15,98,254,0.65)] hover:scale-105 hover:-translate-y-1.5 active:scale-95 transition-all duration-300 ease-out focus:outline-none focus:ring-4 focus:ring-[#0F62FE]/30 cursor-pointer"
+            className="group w-full sm:w-auto min-w-[260px] sm:min-w-[300px] inline-flex items-center justify-center gap-3.5 px-8 sm:px-12 py-5 sm:py-6 text-lg sm:text-xl font-bold text-white bg-gradient-to-r from-[#0F62FE] to-[#1D4ED8] rounded-2xl sm:rounded-[20px] shadow-[0_14px_32px_-6px_rgba(15,98,254,0.45)] hover:shadow-[0_22px_44px_-6px_rgba(15,98,254,0.65)] hover:scale-[1.03] hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 ease-out focus:outline-none focus:ring-4 focus:ring-[#0F62FE]/30 cursor-pointer"
           >
-            <Send className="w-6 h-6" />
+            <Send className="w-6 h-6 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300 ease-out" />
             <span>Get In Touch</span>
           </button>
 
@@ -123,13 +123,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
             href={PERSONAL_INFO.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto min-w-[260px] sm:min-w-[300px] inline-flex items-center justify-center gap-3.5 px-8 sm:px-12 py-5 sm:py-6 text-lg sm:text-xl font-bold text-gray-900 bg-white border-2 border-gray-900 rounded-2xl sm:rounded-[20px] shadow-[0_14px_32px_-6px_rgba(15,23,42,0.18)] hover:shadow-[0_22px_44px_-6px_rgba(15,23,42,0.35)] hover:bg-gray-900 hover:text-white hover:scale-105 hover:-translate-y-1.5 active:scale-95 transition-all duration-300 ease-out focus:outline-none focus:ring-4 focus:ring-gray-900/20 cursor-pointer group"
+            className="w-full sm:w-auto min-w-[260px] sm:min-w-[300px] inline-flex items-center justify-center gap-3.5 px-8 sm:px-12 py-5 sm:py-6 text-lg sm:text-xl font-bold text-gray-900 bg-white border-2 border-gray-900 rounded-2xl sm:rounded-[20px] shadow-[0_14px_32px_-6px_rgba(15,23,42,0.18)] hover:shadow-[0_22px_44px_-6px_rgba(15,23,42,0.35)] hover:bg-gray-900 hover:text-white hover:scale-[1.03] hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 ease-out focus:outline-none focus:ring-4 focus:ring-gray-900/20 cursor-pointer group"
           >
             <svg className="w-6 h-6 fill-current text-[#0077B5] group-hover:text-white transition-colors" viewBox="0 0 24 24">
               <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-1.3.36-2.54 1.96-2.54 1.57 0 1.59 1.47 1.59 2.62v4.85h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
             </svg>
             <span>LinkedIn Profile</span>
-            <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
+            <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 ease-out" />
           </a>
         </div>
       </section>

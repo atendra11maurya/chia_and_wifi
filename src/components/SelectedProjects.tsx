@@ -30,11 +30,11 @@ export const SelectedProjects: React.FC = () => {
           {CONFIDENTIAL_PROJECTS.map((proj, idx) => (
             <motion.div
               key={proj.id}
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="bg-[#F8F9FB] border border-gray-200 rounded-[24px] p-6 sm:p-8 flex flex-col justify-between hover:border-[#0F62FE]/40 hover:shadow-sm transition-all group"
+              transition={{ duration: 0.4, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              className="bg-[#F8F9FB] border border-gray-200 rounded-[24px] p-6 sm:p-8 flex flex-col justify-between hover:border-[#0F62FE]/50 hover:-translate-y-1.5 hover:shadow-md transition-all duration-300 ease-out group cursor-pointer"
             >
               <div>
                 {/* Top Badges Bar */}
@@ -51,7 +51,7 @@ export const SelectedProjects: React.FC = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="font-heading font-bold text-gray-900 text-xl mb-3 group-hover:text-[#0F62FE] transition-colors">
+                <h3 className="font-heading font-bold text-gray-900 text-xl mb-3 group-hover:text-[#0F62FE] transition-colors duration-300">
                   {proj.title}
                 </h3>
 
@@ -61,7 +61,7 @@ export const SelectedProjects: React.FC = () => {
                 </p>
 
                 {/* Impact Highlight Box */}
-                <div className="bg-white border border-gray-200/90 rounded-xl p-4 mb-6">
+                <div className="bg-white border border-gray-200/90 rounded-xl p-4 mb-6 group-hover:border-gray-300 transition-colors duration-300">
                   <span className="text-[11px] font-mono text-gray-400 uppercase tracking-wider block mb-1">
                     Key Silicon Metric Impact
                   </span>
@@ -88,10 +88,10 @@ export const SelectedProjects: React.FC = () => {
 
                 <button
                   onClick={() => setSelectedProject(proj)}
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0F62FE] hover:text-[#0353E9] transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0F62FE] group-hover:text-[#0353E9] transition-colors cursor-pointer"
                 >
                   <span>View Details</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+                  <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300 ease-out" />
                 </button>
               </div>
 

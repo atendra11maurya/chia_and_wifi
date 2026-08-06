@@ -11,7 +11,7 @@ export const Education: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col items-start mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#EFF4FE] text-[#0F62FE] text-xs font-mono font-medium mb-3">
-            <span>07 // ACADEMIC BACKGROUND</span>
+            <span>04 // ACADEMIC BACKGROUND</span>
           </div>
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-3">
             Education & Academic Credentials
@@ -26,11 +26,11 @@ export const Education: React.FC = () => {
           {EDUCATION_DATA.slice(0, 2).map((edu, idx) => (
             <motion.div
               key={edu.id}
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="bg-white border border-gray-200 rounded-[24px] p-6 sm:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-all"
+              transition={{ duration: 0.4, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              className="group bg-white border border-gray-200 rounded-[24px] p-6 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-md hover:-translate-y-1.5 hover:border-[#0F62FE]/40 transition-all duration-300 ease-out cursor-pointer"
             >
               <div>
                 {/* Header Icon & Degree */}

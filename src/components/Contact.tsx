@@ -26,13 +26,13 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-white border-t border-gray-200/80 relative">
+    <section id="contact" className="py-24 bg-[#F8F9FB] border-t border-gray-200/80 relative">
       <div className="max-w-[1280px] mx-auto px-6 md:px-10">
 
         {/* Centered Section Header */}
         <div className="flex flex-col items-center text-center mb-16 max-w-2xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-[#2563EB] text-xs font-mono font-semibold mb-4">
-            <span>CONNECT & COLLABORATE</span>
+            <span>06 // CONNECT & COLLABORATE</span>
           </div>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight mb-4">
             Get in Touch

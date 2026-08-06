@@ -60,7 +60,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, activeSection }) 
                   href={link.href}
                   className={`px-6 py-2.5 text-base md:text-lg font-bold rounded-2xl transition-all duration-300 ${
                     isActive
-                      ? 'bg-gradient-to-r from-[#0F62FE] via-[#0284C7] to-[#06B6D4] text-white shadow-md shadow-blue-500/25 scale-105'
+                      ? 'bg-[#0F62FE] text-white shadow-sm hover:bg-[#0353E9] scale-105'
                       : 'bg-slate-100/80 text-slate-700 hover:bg-slate-200/80 hover:text-slate-900 border border-slate-200/50'
                   }`}
                 >
@@ -74,9 +74,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, activeSection }) 
           <div className="hidden sm:flex items-center gap-3">
             <button
               onClick={onOpenContact}
-              className="inline-flex items-center gap-2.5 px-6 py-3 text-sm md:text-base font-bold text-white bg-[#0F62FE] rounded-2xl hover:bg-[#0353E9] hover:shadow-md hover:scale-105 active:scale-95 transition-all duration-200 shadow-sm focus:outline-none focus:ring-4 focus:ring-[#0F62FE]/30 cursor-pointer"
+              className="group inline-flex items-center gap-2.5 px-6 py-3 text-sm md:text-base font-bold text-white bg-[#0F62FE] rounded-2xl hover:bg-[#0353E9] hover:shadow-md hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 ease-out shadow-sm focus:outline-none focus:ring-4 focus:ring-[#0F62FE]/30 cursor-pointer"
             >
-              <Send className="w-4 h-4 md:w-5 md:h-5" />
+              <Send className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300 ease-out" />
               <span>Contact</span>
             </button>
           </div>

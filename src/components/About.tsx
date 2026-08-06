@@ -27,7 +27,7 @@ export const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-[#F8F9FB] border-y border-gray-200/80">
+    <section id="about" className="py-24 bg-white border-t border-gray-200/80">
       <div className="max-w-[1280px] mx-auto px-6 md:px-10">
 
         {/* Section Header */}
@@ -40,18 +40,18 @@ export const About: React.FC = () => {
           </h2>
         </div>
 
-        {/* Pillars Grid */}
+        {/* 4 Core Pillars Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {pillars.map((pillar, idx) => {
             const IconComponent = pillar.icon;
             return (
               <motion.div
                 key={pillar.title}
-                initial={{ opacity: 0, y: 16 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.1 }}
-                className="bg-white border border-gray-200/80 rounded-2xl p-6 hover:border-[#0F62FE]/40 transition-all hover:shadow-sm flex flex-col justify-between"
+                transition={{ duration: 0.4, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                className="bg-[#F8F9FB] border border-gray-200/80 rounded-2xl p-6 hover:border-[#0F62FE]/40 hover:-translate-y-1.5 hover:shadow-md transition-all duration-300 ease-out flex flex-col justify-between cursor-pointer"
               >
                 <div>
                   <div className="w-10 h-10 rounded-xl bg-[#EFF4FE] text-[#0F62FE] flex items-center justify-center mb-5">

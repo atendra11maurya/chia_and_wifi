@@ -4,7 +4,7 @@ import { EXPERIENCE_DATA } from '../data/profileData';
 
 export const CareerTimeline: React.FC = () => {
   return (
-    <section id="career" className="py-24 bg-[#F8F9FB] border-t border-gray-200/80">
+    <section id="career" className="py-24 bg-white border-t border-gray-200/80">
       <div className="max-w-[1280px] mx-auto px-6 md:px-10">
 
         {/* Section Header */}
@@ -25,14 +25,14 @@ export const CareerTimeline: React.FC = () => {
           {EXPERIENCE_DATA.map((item, idx) => (
             <motion.div
               key={item.id}
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.08 }}
+              transition={{ duration: 0.4, delay: idx * 0.08, ease: [0.16, 1, 0.3, 1] }}
               className="relative group"
             >
               {/* Card Container */}
-              <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-md transition-all">
+              <div className="bg-[#F8F9FB] border border-gray-200/90 rounded-[20px] p-6 sm:p-8 shadow-xs hover:shadow-md hover:-translate-y-1.5 hover:border-[#0F62FE]/40 transition-all duration-300 ease-out">
 
                 {/* Top Row Header */}
                 <div className="flex flex-wrap items-start justify-between gap-4 mb-4 pb-4 border-b border-gray-100">
