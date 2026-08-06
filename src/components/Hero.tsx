@@ -96,13 +96,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
         </div>
       </section>
 
-      {/* Dedicated High-Impact White CTA Section (Big, Attention-Grabbing Buttons) */}
-      <section className="bg-white border-b border-gray-200/90 py-10 sm:py-14 px-6 relative z-20">
-        <div className="max-w-[1280px] mx-auto flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8">
+      {/* Dedicated High-Impact Gradient CTA Section (Big, Popping Buttons) */}
+      <section className="bg-gradient-to-b from-[#0B0F17] via-slate-50 to-white py-12 sm:py-16 px-6 relative z-20 overflow-hidden">
+        <div className="max-w-[1280px] mx-auto flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
           {/* Get In Touch Button */}
           <button
             onClick={onOpenContact}
-            className="w-full sm:w-auto min-w-[260px] sm:min-w-[300px] inline-flex items-center justify-center gap-3.5 px-8 sm:px-12 py-5 sm:py-6 text-lg sm:text-xl font-bold text-white bg-[#0F62FE] rounded-2xl sm:rounded-[20px] hover:bg-[#0353E9] transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1 active:translate-y-0 focus:outline-none focus:ring-4 focus:ring-[#0F62FE]/30 cursor-pointer"
+            className="w-full sm:w-auto min-w-[260px] sm:min-w-[300px] inline-flex items-center justify-center gap-3.5 px-8 sm:px-12 py-5 sm:py-6 text-lg sm:text-xl font-bold text-white bg-gradient-to-r from-[#0F62FE] to-[#1D4ED8] rounded-2xl sm:rounded-[20px] shadow-[0_14px_32px_-6px_rgba(15,98,254,0.45)] hover:shadow-[0_22px_44px_-6px_rgba(15,98,254,0.65)] hover:scale-105 hover:-translate-y-1.5 active:scale-95 transition-all duration-300 ease-out focus:outline-none focus:ring-4 focus:ring-[#0F62FE]/30 cursor-pointer"
           >
             <Send className="w-6 h-6" />
             <span>Get In Touch</span>
@@ -113,7 +113,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
             href={PERSONAL_INFO.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto min-w-[260px] sm:min-w-[300px] inline-flex items-center justify-center gap-3.5 px-8 sm:px-12 py-5 sm:py-6 text-lg sm:text-xl font-bold text-gray-900 bg-white border-2 border-gray-900 rounded-2xl sm:rounded-[20px] hover:bg-gray-900 hover:text-white transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1 active:translate-y-0 focus:outline-none focus:ring-4 focus:ring-gray-900/20 cursor-pointer group"
+            className="w-full sm:w-auto min-w-[260px] sm:min-w-[300px] inline-flex items-center justify-center gap-3.5 px-8 sm:px-12 py-5 sm:py-6 text-lg sm:text-xl font-bold text-gray-900 bg-white border-2 border-gray-900 rounded-2xl sm:rounded-[20px] shadow-[0_14px_32px_-6px_rgba(15,23,42,0.18)] hover:shadow-[0_22px_44px_-6px_rgba(15,23,42,0.35)] hover:bg-gray-900 hover:text-white hover:scale-105 hover:-translate-y-1.5 active:scale-95 transition-all duration-300 ease-out focus:outline-none focus:ring-4 focus:ring-gray-900/20 cursor-pointer group"
           >
             <svg className="w-6 h-6 fill-current text-[#0077B5] group-hover:text-white transition-colors" viewBox="0 0 24 24">
               <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-1.3.36-2.54 1.96-2.54 1.57 0 1.59 1.47 1.59 2.62v4.85h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
