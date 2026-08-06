@@ -22,7 +22,7 @@ export const Certifications: React.FC = () => {
         </div>
 
         {/* Certifications Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {CERTIFICATIONS_DATA.map((cert, idx) => (
             <motion.div
               key={cert.id}
@@ -30,35 +30,35 @@ export const Certifications: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.08 }}
-              className="bg-[#F8F9FB] border border-gray-200/90 rounded-[20px] p-6 flex flex-col justify-between hover:border-[#0F62FE]/40 transition-all hover:shadow-xs"
+              className="bg-[#F8F9FB] border border-gray-200/90 rounded-[24px] p-8 sm:p-10 flex flex-col justify-between hover:border-[#0F62FE]/40 transition-all hover:shadow-md"
             >
               <div>
                 {/* Header Icon */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-white border border-gray-200 text-[#0F62FE] flex items-center justify-center">
-                    <Award className="w-5 h-5" />
+                <div className="flex items-center justify-between mb-6">
+                  <div className="w-14 h-14 rounded-2xl bg-white border border-gray-200 text-[#0F62FE] flex items-center justify-center shadow-xs">
+                    <Award className="w-7 h-7" />
                   </div>
                   {cert.badge && (
-                    <span className="px-2.5 py-0.5 rounded-full bg-blue-50 text-[#0F62FE] text-[11px] font-mono font-bold border border-blue-200">
+                    <span className="px-3.5 py-1 rounded-full bg-blue-50 text-[#0F62FE] text-xs sm:text-sm font-mono font-bold border border-blue-200">
                       {cert.badge}
                     </span>
                   )}
                 </div>
 
                 {/* Title */}
-                <h3 className="font-heading font-bold text-gray-900 text-base mb-2 leading-tight">
+                <h3 className="font-heading font-bold text-gray-900 text-xl sm:text-2xl mb-3 leading-snug">
                   {cert.title}
                 </h3>
 
                 {/* Issuer */}
-                <p className="text-gray-600 text-xs font-medium mb-4">
+                <p className="text-gray-600 text-sm sm:text-base font-medium mb-6">
                   Issued by <span className="text-gray-900 font-semibold">{cert.issuer}</span>
                 </p>
               </div>
 
-              <div className="pt-3 border-t border-gray-200/60 flex items-center justify-between text-xs font-mono text-gray-400">
+              <div className="pt-4 border-t border-gray-200/60 flex items-center justify-between text-xs sm:text-sm font-mono text-gray-500">
                 <span>{cert.category}</span>
-                {cert.date && <span>{cert.date}</span>}
+                {cert.date && <span className="font-semibold text-gray-700">{cert.date}</span>}
               </div>
 
             </motion.div>

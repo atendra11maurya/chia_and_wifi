@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Send, Menu, X } from 'lucide-react';
-import { PERSONAL_INFO } from '../data/profileData';
 
 interface NavbarProps {
   onOpenContact: () => void;
@@ -49,28 +48,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, activeSection }) 
           : 'bg-white py-5 border-b border-gray-100'
           }`}
       >
-        <div className="max-w-[1280px] mx-auto px-6 md:px-10 flex items-center justify-between">
-          {/* Logo / Personal Brand */}
-          <a
-            href="#hero"
-            className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-[#0F62FE]/20 rounded-lg p-1"
-          >
-            <div className="w-10 h-10 rounded-xl bg-[#0F62FE] text-white flex items-center justify-center font-mono font-bold text-lg shadow-sm group-hover:bg-[#0353E9] transition-colors">
-              AM
-            </div>
-            <div className="flex flex-col">
-              <span className="font-heading font-semibold text-gray-900 text-base leading-tight group-hover:text-[#0F62FE] transition-colors">
-                {PERSONAL_INFO.name}
-              </span>
-              <span className="text-xs text-gray-500 font-mono flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block animate-pulse"></span>
-                Staff Engineer @ Samsung
-              </span>
-            </div>
-          </a>
-
-          {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex items-center gap-8">
+        <div className="w-full px-6 md:px-12 lg:px-16 flex items-center justify-between">
+          {/* Desktop Navigation Links (Pill-Style Navigation) */}
+          <div className="hidden lg:flex items-center gap-3">
             {navLinks.map((link) => {
               const sectionId = link.href.substring(1);
               const isActive = activeSection === sectionId;
@@ -78,8 +58,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, activeSection }) 
                 <a
                   key={link.label}
                   href={link.href}
-                  className={`text-sm font-medium transition-colors hover:text-[#0F62FE] ${isActive ? 'text-[#0F62FE] font-semibold' : 'text-gray-600'
-                    }`}
+                  className={`px-6 py-2.5 text-base md:text-lg font-bold rounded-2xl transition-all duration-300 ${
+                    isActive
+                      ? 'bg-gradient-to-r from-[#0F62FE] via-[#0284C7] to-[#06B6D4] text-white shadow-md shadow-blue-500/25 scale-105'
+                      : 'bg-slate-100/80 text-slate-700 hover:bg-slate-200/80 hover:text-slate-900 border border-slate-200/50'
+                  }`}
                 >
                   {link.label}
                 </a>
@@ -87,13 +70,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, activeSection }) 
             })}
           </div>
 
-          {/* Action Buttons */}
+          {/* Action Buttons (Far Right Corner) */}
           <div className="hidden sm:flex items-center gap-3">
             <button
               onClick={onOpenContact}
-              className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold text-white bg-[#0F62FE] rounded-xl hover:bg-[#0353E9] transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-[#0F62FE]/30 cursor-pointer"
+              className="inline-flex items-center gap-2.5 px-6 py-3 text-sm md:text-base font-bold text-white bg-[#0F62FE] rounded-2xl hover:bg-[#0353E9] hover:shadow-md hover:scale-105 active:scale-95 transition-all duration-200 shadow-sm focus:outline-none focus:ring-4 focus:ring-[#0F62FE]/30 cursor-pointer"
             >
-              <Send className="w-3.5 h-3.5" />
+              <Send className="w-4 h-4 md:w-5 md:h-5" />
               <span>Contact</span>
             </button>
           </div>
@@ -101,7 +84,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, activeSection }) 
           {/* Mobile Menu Toggle Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-xl text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
+            className="lg:hidden p-2 rounded-xl text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors ml-auto"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

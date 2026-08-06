@@ -375,34 +375,6 @@ export const CERTIFICATIONS_DATA: CertificationItem[] = [
     badge: "Specialist"
   },
   {
-    id: "cert-amcat-data",
-    title: "AMCAT Certified Data Processing Specialist",
-    issuer: "Aspiring Minds / AMCAT",
-    category: "Analytical & Data",
-    badge: "Certified"
-  },
-  {
-    id: "cert-amcat-semi",
-    title: "AMCAT Certified Sales Professional - Electronics & Semiconductor Engineering",
-    issuer: "Aspiring Minds / AMCAT",
-    category: "Semiconductor Domain",
-    badge: "Domain Certified"
-  },
-  {
-    id: "cert-amcat-corp",
-    title: "AMCAT Certified Corporate Sales Manager",
-    issuer: "Aspiring Minds / AMCAT",
-    category: "Professional Competency",
-    badge: "Certified"
-  },
-  {
-    id: "cert-amcat-tele",
-    title: "AMCAT Certified Telesales Professional",
-    issuer: "Aspiring Minds / AMCAT",
-    category: "Professional Competency",
-    badge: "Certified"
-  },
-  {
     id: "cert-bhel-training",
     title: "Vocational Industrial Engineering Training",
     issuer: "Bharat Heavy Electricals Limited (BHEL)",
