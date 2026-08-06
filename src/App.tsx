@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
-import { TechNodes } from './components/TechNodes';
 import { CareerTimeline } from './components/CareerTimeline';
 import { TechnicalExpertise } from './components/TechnicalExpertise';
 import { Experience } from './components/Experience';
@@ -29,7 +28,6 @@ export function App() {
       const sections = [
         'hero',
         'about',
-        'tech-nodes',
         'expertise',
         'career',
         'experience',
@@ -74,7 +72,6 @@ export function App() {
           onOpenContact={scrollToContact}
         />
         <About />
-        <TechNodes />
         <TechnicalExpertise />
         <CareerTimeline />
         <Experience />

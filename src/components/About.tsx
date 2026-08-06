@@ -57,9 +57,7 @@ export const About: React.FC = () => {
             <p>
               Having completed his M.Tech in Microelectronics from the prestigious <strong className="text-gray-900 font-semibold">BITS Pilani</strong> and having spent nearly 6 years at <strong className="text-gray-900 font-semibold">Synopsys Inc</strong> prior to joining Samsung, Avinash possesses an end-to-end understanding of standard cell topology, place-and-route grid compatibility, and sub-micron DRC/DFM compliance.
             </p>
-            <p>
-              His technical leadership covers the complete semiconductor layout lifecycle—from initial architectural cell exploration alongside circuit designers to final multi-vendor DRC/LVS/ICV sign-off across advanced FinFET and EUV nodes (4nm, 5nm, 6nm, 7nm, 8nm, 10nm, 12nm, and 22nm).
-            </p>
+
           </motion.div>
 
           {/* Quick Highlight Box (5 cols) */}
@@ -84,13 +82,7 @@ export const About: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 mt-0.5 shrink-0" />
-                <div>
-                  <span className="font-semibold text-gray-900">8 Semiconductor Technology Nodes</span>
-                  <p className="text-xs text-gray-500">Sub-5nm EUV FinFET (4nm, 5nm) to Planar CMOS (22nm)</p>
-                </div>
-              </div>
+
 
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-emerald-600 mt-0.5 shrink-0" />
