@@ -10,31 +10,24 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
   return (
     <>
-      {/* Main Light Hero Section */}
-      <section id="hero" className="relative pt-24 pb-10 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-br from-white via-slate-50 to-[#F0F4F8] text-slate-900">
+      {/* Main Light Hero Section (Vertically Lengthened & Centered) */}
+      <section id="hero" className="relative min-h-[96vh] lg:min-h-[980px] flex flex-col justify-center pt-36 pb-28 md:pt-52 md:pb-44 overflow-hidden bg-gradient-to-br from-white via-slate-50 to-[#F0F4F8] text-slate-900">
         {/* Background Silicon Microchip Grid Pattern */}
         <div className="absolute inset-0 silicon-grid-pattern opacity-60 pointer-events-none" />
 
         {/* ========== DESKTOP: Full-Height Left Portrait (hidden on mobile) ========== */}
-        <div className="absolute top-16 md:top-20 bottom-0 left-0 w-1/2 max-w-[540px] pointer-events-none z-0 overflow-hidden hidden lg:block">
+        <div className="absolute top-8 md:top-12 bottom-0 left-0 w-1/2 max-w-[750px] pointer-events-none z-0 overflow-hidden hidden lg:block">
           <img
             src="/avinash_maurya.jpg"
             alt="Avinash Maurya"
-            className="w-full h-full object-cover object-[center_35%] scale-x-[-1] opacity-100"
+            className="w-full h-full object-cover object-[center_10%] scale-x-[-1] opacity-100"
           />
-          {/* Soft Right Edge Blend covering Gemini watermark star */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent 25% via-[#F0F4F8]/90 60% to-[#F0F4F8]" />
+          {/* Soft Right Edge Blend for Smooth Section Transition */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#F0F4F8]" />
         </div>
 
-        {/* Decorative Alignment Overlay Marks */}
-        <div className="absolute top-24 left-8 font-mono text-[10px] text-slate-400 pointer-events-none hidden md:block">
-          [GDSII DIE ORIGIN X:000.00 Y:000.00]
-        </div>
-        <div className="absolute top-24 right-8 font-mono text-[10px] text-slate-400 pointer-events-none hidden md:block">
-          [EUV MASK BOUNDARY: CLEAN]
-        </div>
 
-        <div className="max-w-[1280px] mx-auto px-6 md:px-10 relative z-10">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-10 relative z-10 w-full">
 
           {/* ========== MOBILE: Centered Portrait Image (visible only on mobile) ========== */}
           <motion.div
@@ -59,7 +52,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
             {/* Spacer for Left Image Alignment on Desktop */}
             <div className="hidden lg:block lg:col-span-5 pointer-events-none h-full" />
 
-            {/* Right Hero Copy Column */}
+            {/* Right Hero Copy Column (Vertically Centered) */}
             <motion.div
               initial={{ opacity: 0, x: 0, y: 16 }}
               animate={{ opacity: 1, x: 0, y: 0 }}

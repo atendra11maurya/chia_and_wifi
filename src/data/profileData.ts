@@ -179,7 +179,7 @@ export const TECHNICAL_EXPERTISE: SkillCategory[] = [
     id: "submicron-tradeoffs",
     title: "Deep Sub-Micron Physics & Trade-offs",
     iconName: "Layers",
-    description: "Architectural exploration and silicon physical trade-offs in sub-7nm FinFET and EUV process technologies.",
+    description: "Architectural exploration and silicon physical trade-offs in FinFET technologies.",
     skills: [
       "Electromigration (EM) & IR Drop Mitigation",
       "Pin Accessibility & P&R Routability Optimization",
