@@ -13,16 +13,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
       {/* Background Silicon Microchip Grid Pattern */}
       <div className="absolute inset-0 silicon-grid-pattern opacity-20 pointer-events-none" />
 
-      {/* Full-Height Unboxed Left Portrait Image (Mirrored & Seamlessly Blended) */}
+      {/* Full-Height Left Portrait Image (Crisp, 100% Brightness, Mirrored) */}
       <div className="absolute inset-y-0 left-0 w-full lg:w-1/2 pointer-events-none z-0 overflow-hidden">
         <img
           src="/avinash_maurya.jpg"
           alt="Avinash Maurya"
-          className="w-full h-full object-cover object-top scale-x-[-1] opacity-85 lg:opacity-95"
+          className="w-full h-full object-cover object-top scale-x-[-1] opacity-100"
         />
-        {/* Soft Radial & Linear Gradients for Seamless Blending */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#0B0F17]/70 to-[#0B0F17]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F17] via-transparent to-[#0B0F17]/80" />
+        {/* Soft Right Edge Blend for Smooth Section Transition */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#0B0F17]" />
       </div>
 
       {/* Decorative Alignment Overlay Marks */}
