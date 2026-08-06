@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, ChevronRight } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 import { EXPERIENCE_DATA } from '../data/profileData';
 
 export const CareerTimeline: React.FC = () => {
