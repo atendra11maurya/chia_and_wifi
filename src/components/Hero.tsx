@@ -97,7 +97,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
       </section>
 
       {/* Dedicated High-Impact Gradient CTA Section (Big, Popping Buttons) */}
-      <section className="bg-gradient-to-b from-[#0B0F17] via-slate-50 to-white py-12 sm:py-16 px-6 relative z-20 overflow-hidden">
+      <section className="bg-gradient-to-br from-[#F8F9FB] via-blue-50/30 to-[#F8F9FB] py-12 sm:py-16 px-6 relative z-20 overflow-hidden border-t border-gray-100">
         <div className="max-w-[1280px] mx-auto flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
           {/* Get In Touch Button */}
           <button
