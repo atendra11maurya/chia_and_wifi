@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar } from 'lucide-react';
 import { EXPERIENCE_DATA } from '../data/profileData';
 
 export const CareerTimeline: React.FC = () => {
@@ -51,14 +50,6 @@ export const CareerTimeline: React.FC = () => {
                     <div className="font-heading text-base font-semibold text-[#0F62FE]">
                       {item.company}
                     </div>
-                  </div>
-
-                  <div className="flex flex-col sm:items-end font-mono text-xs text-gray-500 gap-1">
-                    <span className="flex items-center gap-1.5 bg-gray-50 border border-gray-200 px-3 py-1 rounded-lg">
-                      <Calendar className="w-3.5 h-3.5 text-gray-400" />
-                      {item.period}
-                    </span>
-                    <span className="text-gray-400 font-medium">({item.duration})</span>
                   </div>
                 </div>
 
