@@ -25,11 +25,6 @@ export const Contact: React.FC = () => {
     showToast('Email copied', 'email');
   };
 
-  const handleCopyLocation = () => {
-    navigator.clipboard.writeText(PERSONAL_INFO.location);
-    showToast('Location copied', 'location');
-  };
-
   return (
     <section id="contact" className="py-24 bg-white border-t border-gray-200/80 relative">
       <div className="max-w-[1280px] mx-auto px-6 md:px-10">
@@ -113,31 +108,27 @@ export const Contact: React.FC = () => {
                     </div>
                     <div>
                       <div className="text-xs font-mono text-gray-400 uppercase tracking-wider mb-0.5">Location</div>
-                      <div className="text-sm sm:text-base font-semibold text-gray-900">
+                      <a
+                        href="https://maps.google.com/?q=Bengaluru,+Karnataka,+India"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm sm:text-base font-semibold text-gray-900 hover:text-[#2563EB] transition-colors"
+                      >
                         {PERSONAL_INFO.location}
-                      </div>
+                      </a>
                     </div>
                   </div>
 
-                  <button
-                    onClick={handleCopyLocation}
-                    aria-label="Copy location to clipboard"
+                  <a
+                    href="https://maps.google.com/?q=Bengaluru,+Karnataka,+India"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open location on Google Maps"
                     className="p-2.5 rounded-xl text-gray-400 hover:text-[#2563EB] hover:bg-white border border-transparent hover:border-gray-200 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] cursor-pointer shrink-0 ml-2"
-                    title="Copy Location"
+                    title="Open on Google Maps"
                   >
-                    <motion.div
-                      key={copiedField === 'location' ? 'check' : 'copy'}
-                      initial={{ rotate: -90, opacity: 0 }}
-                      animate={{ rotate: 0, opacity: 1 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      {copiedField === 'location' ? (
-                        <Check className="w-4 h-4 text-emerald-600" />
-                      ) : (
-                        <Copy className="w-4 h-4" />
-                      )}
-                    </motion.div>
-                  </button>
+                    <ArrowUpRight className="w-4 h-4" />
+                  </a>
                 </div>
               </div>
             </div>
