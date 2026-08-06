@@ -22,22 +22,16 @@ export const CareerTimeline: React.FC = () => {
         </div>
 
         {/* Timeline Container */}
-        <div className="relative pl-6 sm:pl-8 border-l-2 border-gray-200 space-y-12">
+        <div className="space-y-8">
           {EXPERIENCE_DATA.map((item, idx) => (
             <motion.div
               key={item.id}
-              initial={{ opacity: 0, x: -16 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.08 }}
               className="relative group"
             >
-              {/* Timeline Node Circle Icon */}
-              <div className={`absolute -left-[31px] sm:-left-[39px] top-1.5 w-6 h-6 sm:w-7 sm:h-7 rounded-full border-4 transition-colors flex items-center justify-center ${item.isCurrent
-                ? 'border-white bg-[#0F62FE] ring-4 ring-[#0F62FE]/20'
-                : 'border-white bg-gray-400 group-hover:bg-[#0F62FE]'
-                }`} />
-
               {/* Card Container */}
               <div className="bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-md transition-all">
 
@@ -69,19 +63,9 @@ export const CareerTimeline: React.FC = () => {
                 </div>
 
                 {/* Summary */}
-                <p className="text-gray-700 text-sm sm:text-base mb-5 leading-relaxed">
+                <p className="text-gray-700 text-sm sm:text-base mb-4 leading-relaxed">
                   {item.summary}
                 </p>
-
-                {/* Highlights List */}
-                <div className="space-y-2.5 mb-6">
-                  {item.highlights.map((point, pointIdx) => (
-                    <div key={pointIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-600">
-                      <ChevronRight className="w-4 h-4 text-[#0F62FE] shrink-0 mt-0.5" />
-                      <span>{point}</span>
-                    </div>
-                  ))}
-                </div>
 
                 {/* Bottom Tags */}
                 <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-gray-100">
@@ -92,16 +76,6 @@ export const CareerTimeline: React.FC = () => {
                     {item.keyTools.map(tool => (
                       <span key={tool} className="px-2.5 py-1 bg-[#F8F9FB] border border-gray-200 rounded-md text-xs font-mono text-gray-700">
                         {tool}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Nodes */}
-                  <div className="flex flex-wrap items-center gap-1.5">
-                    <span className="text-xs font-mono text-gray-400 uppercase">Nodes:</span>
-                    {item.keyNodes.map(node => (
-                      <span key={node} className="px-2 py-0.5 bg-blue-50 border border-blue-200 text-[#0F62FE] rounded text-xs font-mono font-bold">
-                        {node}
                       </span>
                     ))}
                   </div>

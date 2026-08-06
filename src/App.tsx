@@ -4,8 +4,6 @@ import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { CareerTimeline } from './components/CareerTimeline';
 import { TechnicalExpertise } from './components/TechnicalExpertise';
-import { Experience } from './components/Experience';
-import { SelectedProjects } from './components/SelectedProjects';
 import { Education } from './components/Education';
 import { Certifications } from './components/Certifications';
 import { Contact } from './components/Contact';
@@ -30,8 +28,6 @@ export function App() {
         'about',
         'expertise',
         'career',
-        'experience',
-        'projects',
         'education',
         'certifications',
         'contact',
@@ -74,8 +70,6 @@ export function App() {
         <About />
         <TechnicalExpertise />
         <CareerTimeline />
-        <Experience />
-        <SelectedProjects />
         <Education />
         <Certifications />
         <Contact onOpenResume={() => setIsResumeOpen(true)} />
