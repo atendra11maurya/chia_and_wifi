@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+
+  --color-silicon-accent: #0F62FE;
+  --color-silicon-accent-hover: #0353E9;
+  --color-silicon-accent-light: #EFF4FE;
+  --color-silicon-bg-subtle: #F8F9FB;
+  --color-silicon-dark: #111827;
+  --color-silicon-muted: #6B7280;
+  --color-silicon-border: #E5E7EB;
+
+  --radius-silicon: 18px;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: #111827;
+    background-color: #ffffff;
+    scroll-behavior: smooth;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+
+  .font-num {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom Scrollbar for clean engineering aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F9FB;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
+
+/* Silicon grid subtle background pattern (non-gradient, pure vector vector lines) */
+.silicon-grid-pattern {
+  background-image: radial-gradient(#E5E7EB 1px, transparent 1px);
+  background-size: 24px 24px;
+}
