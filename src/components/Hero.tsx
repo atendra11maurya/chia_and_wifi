@@ -52,7 +52,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onOpenContact }) => {
 
             {/* Core Value Proposition Paragraph */}
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl">
-              Specialized in sub-5nm silicon physical layout architecture, custom cell library design, and automated DRC/DFM verification. Over 8 years of deep sub-micron R&D experience spanning <span className="font-mono text-gray-900 font-semibold bg-gray-100 border border-gray-200 px-1.5 py-0.5 rounded">4nm</span> down to <span className="font-mono text-gray-900 font-semibold bg-gray-100 border border-gray-200 px-1.5 py-0.5 rounded">22nm</span> process nodes, Cadence Virtuoso & Synopsys Custom Compiler tool mastery.
+              Specialized in sub-5nm silicon physical layout architecture, custom cell library design, and automated DRC/DFM verification. Over 8 years of deep sub-micron R&D experience.
             </p>
 
             {/* Key Quick Badge Tags */}
