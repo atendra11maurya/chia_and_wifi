@@ -22,14 +22,43 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
       </div>
 
       <div className="max-w-[1280px] mx-auto px-6 md:px-10 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
 
-          {/* Main Hero Copy Column (7 cols) */}
+          {/* Left Hero Image Column (5 cols) - Mirrored Facing Right */}
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
-            className="lg:col-span-7 flex flex-col items-start"
+            initial={{ opacity: 0, x: -24 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className="lg:col-span-5 flex justify-center lg:justify-start items-center relative order-2 lg:order-1"
+          >
+            <div className="relative w-full max-w-[380px] sm:max-w-[420px] aspect-[4/5] rounded-[32px] overflow-hidden border border-gray-200/90 shadow-2xl bg-[#090D16] group">
+              {/* Subtle Dark Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-transparent z-10 pointer-events-none" />
+
+              {/* Portrait Image (Mirrored horizontally scale-x-[-1]) */}
+              <img
+                src="/avinash_maurya.jpg"
+                alt="Avinash Maurya - Staff Engineer"
+                className="w-full h-full object-cover object-top scale-x-[-1] transition-transform duration-500 ease-out"
+              />
+
+              {/* Floating Profile Badge Overlay */}
+              <div className="absolute bottom-5 left-5 right-5 z-20 bg-white/95 backdrop-blur-md border border-white/60 rounded-2xl p-4 shadow-xl flex items-center justify-between">
+                <div>
+                  <div className="text-xs font-mono font-bold text-gray-900">Avinash Maurya</div>
+                  <div className="text-[11px] font-mono text-[#0F62FE]">Staff Engineer @ Samsung R&D</div>
+                </div>
+                <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" title="Active R&D" />
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Right Hero Copy Column (7 cols) */}
+          <motion.div
+            initial={{ opacity: 0, x: 24 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
+            className="lg:col-span-7 flex flex-col items-start order-1 lg:order-2"
           >
             {/* Semiconductor R&D Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF4FE] border border-[#0F62FE]/30 text-[#0F62FE] text-xs font-mono font-semibold mb-6">
@@ -97,35 +126,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
                 <span>LinkedIn Profile</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-gray-400" />
               </a>
-            </div>
-          </motion.div>
-
-          {/* Right Hero Image Column (5 cols) */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
-            className="lg:col-span-5 flex justify-center lg:justify-end items-center relative"
-          >
-            <div className="relative w-full max-w-[360px] sm:max-w-[400px] aspect-[4/5] rounded-[28px] overflow-hidden border border-gray-200/90 shadow-xl bg-[#F8F9FB] group">
-              {/* Decorative Subtle Dark Gradient Base */}
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent z-10 pointer-events-none" />
-
-              {/* Portrait Image (Mirrored horizontally with scale-x-[-1]) */}
-              <img
-                src="/avinash_maurya.jpg"
-                alt="Avinash Maurya - Staff Engineer"
-                className="w-full h-full object-cover object-top scale-x-[-1] transition-transform duration-500 ease-out"
-              />
-
-              {/* Floating Profile Badge Overlay */}
-              <div className="absolute bottom-5 left-5 right-5 z-20 bg-white/90 backdrop-blur-md border border-white/50 rounded-2xl p-3.5 shadow-lg flex items-center justify-between">
-                <div>
-                  <div className="text-xs font-mono font-bold text-gray-900">Avinash Maurya</div>
-                  <div className="text-[11px] font-mono text-[#0F62FE]">Staff Engineer @ Samsung R&D</div>
-                </div>
-                <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" title="Active R&D" />
-              </div>
             </div>
           </motion.div>
 
