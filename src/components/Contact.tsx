@@ -59,9 +59,12 @@ export const Contact: React.FC = () => {
             className="bg-white border border-gray-200/90 rounded-[20px] p-6 sm:p-10 shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 ease-out flex flex-col justify-between gap-6"
           >
             <div>
-              <h3 className="font-heading text-2xl font-bold text-gray-900 tracking-tight mb-6">
+              <h3 className="font-heading text-2xl font-bold text-gray-900 tracking-tight mb-3">
                 Contact Details
               </h3>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-8">
+                Primary contact channels for direct communication, technical inquiries, and professional location base.
+              </p>
 
               <div className="flex flex-col gap-5">
                 {/* Row 1: Email */}
