@@ -8,10 +8,8 @@ import { Education } from './components/Education';
 import { Certifications } from './components/Certifications';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
-import { ResumeModal } from './components/ResumeModal';
 
 export function App() {
-  const [isResumeOpen, setIsResumeOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
 
   const scrollToContact = () => {
@@ -56,7 +54,6 @@ export function App() {
     <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-[#EFF4FE] selection:text-[#0F62FE]">
       {/* Sticky Header Navigation */}
       <Navbar
-        onOpenResume={() => setIsResumeOpen(true)}
         onOpenContact={scrollToContact}
         activeSection={activeSection}
       />
@@ -64,7 +61,6 @@ export function App() {
       {/* Main Page Content */}
       <main>
         <Hero
-          onOpenResume={() => setIsResumeOpen(true)}
           onOpenContact={scrollToContact}
         />
         <About />
@@ -72,17 +68,11 @@ export function App() {
         <CareerTimeline />
         <Education />
         <Certifications />
-        <Contact onOpenResume={() => setIsResumeOpen(true)} />
+        <Contact />
       </main>
 
       {/* Footer */}
       <Footer />
-
-      {/* Interactive Printable Resume Modal */}
-      <ResumeModal
-        isOpen={isResumeOpen}
-        onClose={() => setIsResumeOpen(false)}
-      />
     </div>
   );
 }

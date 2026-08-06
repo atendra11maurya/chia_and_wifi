@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, FileText, Copy, Check, Send, ArrowUpRight } from 'lucide-react';
+import { Mail, MapPin, Copy, Check, Send, ArrowUpRight } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/profileData';
 
-interface ContactProps {
-  onOpenResume: () => void;
-}
-
-export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
+export const Contact: React.FC = () => {
   const [copied, setCopied] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -109,15 +105,6 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
                 </a>
               </div>
             </div>
-
-            {/* Resume Button */}
-            <button
-              onClick={onOpenResume}
-              className="w-full flex items-center justify-center gap-2.5 px-6 py-3.5 text-sm font-semibold text-gray-900 bg-gray-50 border border-gray-200 rounded-2xl hover:bg-gray-100 transition-all cursor-pointer"
-            >
-              <FileText className="w-4 h-4 text-[#0F62FE]" />
-              <span>Preview & Download Resume</span>
-            </button>
 
           </div>
 

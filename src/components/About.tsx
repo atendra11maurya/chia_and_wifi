@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Cpu, ShieldCheck, Layers, GitBranch, Award, CheckCircle2 } from 'lucide-react';
+import { Cpu, ShieldCheck, Layers, GitBranch } from 'lucide-react';
 
 export const About: React.FC = () => {
   const pillars = [
@@ -38,70 +38,6 @@ export const About: React.FC = () => {
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
             Engineering Precision in Sub-Micron Silicon
           </h2>
-        </div>
-
-        {/* Top Split Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-16">
-
-          {/* Main Copy (7 cols) */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="lg:col-span-7 flex flex-col gap-5 text-gray-600 text-base sm:text-lg leading-relaxed"
-          >
-            <p className="text-gray-900 font-medium text-lg sm:text-xl leading-snug">
-              Avinash Maurya is a Staff Engineer in Layout Design at <span className="text-[#0F62FE]">Samsung Semiconductor India R&D Centre</span> in Bengaluru, possessing over 8 years of specialized expertise in standard cell library layout development and physical verification methodology.
-            </p>
-            <p>
-              Having completed his M.Tech in Microelectronics from the prestigious <strong className="text-gray-900 font-semibold">BITS Pilani</strong> and having spent nearly 6 years at <strong className="text-gray-900 font-semibold">Synopsys Inc</strong> prior to joining Samsung, Avinash possesses an end-to-end understanding of standard cell topology, place-and-route grid compatibility, and sub-micron DRC/DFM compliance.
-            </p>
-
-          </motion.div>
-
-          {/* Quick Highlight Box (5 cols) */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="lg:col-span-5 bg-white border border-gray-200 rounded-[20px] p-6 sm:p-8 shadow-sm flex flex-col gap-6"
-          >
-            <div className="flex items-center gap-3 border-b border-gray-100 pb-4">
-              <Award className="w-5 h-5 text-[#0F62FE]" />
-              <h3 className="font-heading font-semibold text-gray-900 text-lg">Key Professional Metrics</h3>
-            </div>
-
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 mt-0.5 shrink-0" />
-                <div>
-                  <span className="font-semibold text-gray-900">8+ Years Experience</span>
-                  <p className="text-xs text-gray-500">Dedicated to Standard Cell Layout & Physical Design</p>
-                </div>
-              </div>
-
-
-
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 mt-0.5 shrink-0" />
-                <div>
-                  <span className="font-semibold text-gray-900">M.Tech in Microelectronics</span>
-                  <p className="text-xs text-gray-500">Birla Institute of Technology & Science (BITS), Pilani</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 mt-0.5 shrink-0" />
-                <div>
-                  <span className="font-semibold text-gray-900">EDA Tool Mastery</span>
-                  <p className="text-xs text-gray-500">Cadence Virtuoso, Synopsys Custom Compiler & ICC II</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
         </div>
 
         {/* Pillars Grid */}

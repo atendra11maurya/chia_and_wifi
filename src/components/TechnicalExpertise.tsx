@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Cpu, Wrench, ShieldCheck, Layers, Code2, Users, CheckCircle2 } from 'lucide-react';
+import { Cpu, Wrench, ShieldCheck, Layers, Code2, Users } from 'lucide-react';
 import { TECHNICAL_EXPERTISE } from '../data/profileData';
 
 const iconMap: Record<string, React.FC<{ className?: string }>> = {
@@ -55,21 +55,10 @@ export const TechnicalExpertise: React.FC = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-6">
+                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                     {item.description}
                   </p>
-
-                  {/* Skills List */}
-                  <div className="space-y-2.5">
-                    {item.skills.map((skill, sIdx) => (
-                      <div key={sIdx} className="flex items-start gap-2 text-xs font-medium text-gray-700">
-                        <CheckCircle2 className="w-4 h-4 text-[#0F62FE] shrink-0 mt-0.5" />
-                        <span>{skill}</span>
-                      </div>
-                    ))}
-                  </div>
                 </div>
-
               </motion.div>
             );
           })}

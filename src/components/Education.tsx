@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Calendar, MapPin, CheckCircle2 } from 'lucide-react';
+import { GraduationCap, Calendar, MapPin } from 'lucide-react';
 import { EDUCATION_DATA } from '../data/profileData';
 
 export const Education: React.FC = () => {
@@ -49,7 +49,7 @@ export const Education: React.FC = () => {
                 </div>
 
                 {/* Institution & Dates */}
-                <div className="mb-6 pb-4 border-b border-gray-100 flex flex-col gap-1 text-sm font-medium text-gray-700">
+                <div className="flex flex-col gap-1 text-sm font-medium text-gray-700">
                   <div className="font-semibold text-gray-900">{edu.institution}</div>
                   <div className="flex items-center gap-3 text-xs font-mono text-gray-500">
                     <span className="flex items-center gap-1">
@@ -63,16 +63,6 @@ export const Education: React.FC = () => {
                       </span>
                     )}
                   </div>
-                </div>
-
-                {/* Key Coursework Highlights */}
-                <div className="space-y-2.5">
-                  {edu.highlights.map((point, pIdx) => (
-                    <div key={pIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-600">
-                      <CheckCircle2 className="w-4 h-4 text-[#0F62FE] shrink-0 mt-0.5" />
-                      <span>{point}</span>
-                    </div>
-                  ))}
                 </div>
               </div>
 

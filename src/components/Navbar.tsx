@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { FileText, Send, Menu, X } from 'lucide-react';
+import { Send, Menu, X } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/profileData';
 
 interface NavbarProps {
-  onOpenResume: () => void;
   onOpenContact: () => void;
   activeSection: string;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenContact, activeSection }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, activeSection }) => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -91,14 +90,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenContact, act
           {/* Action Buttons */}
           <div className="hidden sm:flex items-center gap-3">
             <button
-              onClick={onOpenResume}
-              className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold text-gray-700 bg-gray-50 border border-gray-200 rounded-xl hover:bg-gray-100 hover:text-gray-900 transition-all focus:outline-none focus:ring-2 focus:ring-[#0F62FE]/20 cursor-pointer"
-            >
-              <FileText className="w-3.5 h-3.5 text-[#0F62FE]" />
-              <span>Resume</span>
-            </button>
-
-            <button
               onClick={onOpenContact}
               className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold text-white bg-[#0F62FE] rounded-xl hover:bg-[#0353E9] transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-[#0F62FE]/30 cursor-pointer"
             >
@@ -134,17 +125,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenContact, act
             </div>
 
             <div className="flex flex-col gap-2 pt-2">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenResume();
-                }}
-                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-semibold text-gray-700 bg-gray-50 border border-gray-200 rounded-xl"
-              >
-                <FileText className="w-4 h-4 text-[#0F62FE]" />
-                <span>View Resume</span>
-              </button>
-
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);

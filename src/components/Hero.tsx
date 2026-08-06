@@ -1,14 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FileText, ArrowUpRight, Award, Cpu, ShieldCheck, MapPin } from 'lucide-react';
+import { ArrowUpRight, Award, Cpu, ShieldCheck, MapPin, Send } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/profileData';
 
 interface HeroProps {
-  onOpenResume: () => void;
   onOpenContact: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onOpenResume, onOpenContact }) => {
+export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
   return (
     <section id="hero" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-white">
       {/* Background Microchip Substrate Grid Pattern */}
@@ -51,9 +50,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onOpenContact }) => {
             </h2>
 
             {/* Core Value Proposition Paragraph */}
-            <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl">
-              Specialized in sub-5nm silicon physical layout architecture, custom cell library design, and automated DRC/DFM verification. Over 8 years of deep sub-micron R&D experience.
-            </p>
+            <div className="text-gray-900 text-lg sm:text-xl font-medium leading-relaxed mb-8 max-w-3xl space-y-4">
+              <p>
+                Avinash Maurya is a Staff Engineer in Layout Design at Samsung Semiconductor India R&D Centre in Bengaluru, possessing over 8 years of specialized expertise in standard cell library layout development and physical verification methodology.
+              </p>
+              <p>
+                Having completed his M.Tech in Microelectronics from the prestigious BITS Pilani and having spent nearly 6 years at Synopsys
+              </p>
+            </div>
 
             {/* Key Quick Badge Tags */}
             <div className="flex flex-wrap items-center gap-3 mb-10 text-xs font-mono text-gray-600">
@@ -74,11 +78,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onOpenContact }) => {
             {/* Call To Action Buttons */}
             <div className="flex flex-wrap items-center gap-4 w-full sm:w-auto">
               <button
-                onClick={onOpenResume}
+                onClick={onOpenContact}
                 className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-sm font-semibold text-white bg-[#0F62FE] rounded-2xl hover:bg-[#0353E9] transition-all shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#0F62FE]/30 cursor-pointer"
               >
-                <FileText className="w-4 h-4" />
-                <span>View Full Resume</span>
+                <Send className="w-4 h-4" />
+                <span>Get In Touch</span>
               </button>
 
               <a
@@ -93,14 +97,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onOpenContact }) => {
                 <span>LinkedIn Profile</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-gray-400" />
               </a>
-
-              <button
-                onClick={onOpenContact}
-                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 text-sm font-semibold text-gray-600 hover:text-[#0F62FE] transition-colors cursor-pointer"
-              >
-                <span>Get In Touch</span>
-                <ArrowUpRight className="w-4 h-4" />
-              </button>
             </div>
           </motion.div>
 
