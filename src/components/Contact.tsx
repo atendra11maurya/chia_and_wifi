@@ -162,9 +162,9 @@ export const Contact: React.FC = () => {
               {/* Primary Button (Blue) */}
               <a
                 href="mailto:pine.avinash@gmail.com?subject=Portfolio%20Inquiry&body=Hello%20Avinash,%0A%0AI%20came%20across%20your%20portfolio..."
-                className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 text-base font-semibold text-white bg-[#2563EB] rounded-2xl hover:bg-[#1d4ed8] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-sm hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-3 px-8 py-5 sm:py-6 text-lg sm:text-xl font-bold text-white bg-[#2563EB] rounded-2xl hover:bg-[#1d4ed8] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-md hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] cursor-pointer"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-6 h-6" />
                 <span>Email Me</span>
               </a>
 
@@ -173,13 +173,13 @@ export const Contact: React.FC = () => {
                 href={PERSONAL_INFO.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 text-base font-semibold text-[#2563EB] bg-white border-2 border-[#2563EB] rounded-2xl hover:bg-blue-50 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-3 px-8 py-5 sm:py-6 text-lg sm:text-xl font-bold text-[#2563EB] bg-white border-2 border-[#2563EB] rounded-2xl hover:bg-blue-50 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] cursor-pointer"
               >
-                <svg className="w-5 h-5 fill-[#2563EB]" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 fill-[#2563EB]" viewBox="0 0 24 24">
                   <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-1.3.36-2.54 1.96-2.54 1.57 0 1.59 1.47 1.59 2.62v4.85h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
                 </svg>
                 <span>LinkedIn</span>
-                <ArrowUpRight className="w-4 h-4 text-[#2563EB]" />
+                <ArrowUpRight className="w-5 h-5 text-[#2563EB]" />
               </a>
             </div>
           </motion.div>
