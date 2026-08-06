@@ -20,7 +20,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
           <img
             src="/avinash_maurya.jpg"
             alt="Avinash Maurya"
-            className="w-full h-full object-cover object-[center_10%] scale-x-[-1] opacity-100"
+            className="w-full h-full object-cover object-[center_10%] opacity-100"
           />
           {/* Soft Right Edge Blend for Smooth Section Transition */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#F0F4F8]" />
@@ -40,7 +40,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
               <img
                 src="/avinash_maurya.jpg"
                 alt="Avinash Maurya"
-                className="w-full h-full object-cover object-top scale-x-[-1]"
+                className="w-full h-full object-cover object-top"
               />
               {/* Subtle Bottom Gradient */}
               <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white/80 to-transparent" />
