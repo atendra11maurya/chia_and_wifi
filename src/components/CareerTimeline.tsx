@@ -42,11 +42,6 @@ export const CareerTimeline: React.FC = () => {
                       <h3 className="font-heading text-xl font-bold text-gray-900">
                         {item.role}
                       </h3>
-                      {item.isCurrent && (
-                        <span className="px-2.5 py-0.5 rounded-full bg-[#EFF4FE] text-[#0F62FE] text-xs font-mono font-semibold">
-                          Current Role
-                        </span>
-                      )}
                     </div>
                     <div className="font-heading text-base font-semibold text-[#0F62FE]">
                       {item.company}
