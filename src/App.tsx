@@ -3,7 +3,6 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { CareerTimeline } from './components/CareerTimeline';
 import { TechnicalExpertise } from './components/TechnicalExpertise';
-import { Education } from './components/Education';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 
@@ -23,7 +22,6 @@ export function App() {
         'hero',
         'expertise',
         'career',
-        'education',
         'contact',
       ];
 
@@ -61,7 +59,6 @@ export function App() {
         />
         <TechnicalExpertise />
         <CareerTimeline />
-        <Education />
         <Contact />
       </main>
 
