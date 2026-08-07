@@ -42,7 +42,7 @@ export const Footer: React.FC = () => {
                 {PERSONAL_INFO.name}
               </div>
               <div className="text-xs text-gray-500 font-mono">
-                Staff Engineer, Layout Design | Samsung Semiconductor
+                Staff Layout Design Engineer | Samsung Semiconductor
               </div>
             </div>
           </div>

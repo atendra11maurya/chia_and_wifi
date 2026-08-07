@@ -2,7 +2,7 @@ import type { ExperienceItem, TechNodeItem, SkillCategory, ProjectItem, Educatio
 
 export const PERSONAL_INFO = {
   name: "Avinash Maurya",
-  title: "Staff Engineer, Layout Design",
+  title: "Staff Layout Design Engineer",
   company: "Samsung Semiconductor India R&D Centre",
   location: "Bengaluru, Karnataka, India",
   educationDegree: "M.Tech in Microelectronics (BITS Pilani)",
