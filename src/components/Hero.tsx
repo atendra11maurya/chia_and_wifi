@@ -86,11 +86,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 md:gap-4 text-sm md:text-base font-semibold text-slate-800 mt-2">
                 <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/95 border border-white/40 shadow-xl hover:bg-white hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 ease-out">
                   <Cpu className="w-4 h-4 md:w-5 md:h-5 text-blue-600" />
-                  <span>Samsung Semiconductor India R&D Centre</span>
+                  <span>Samsung Semiconductor India R&D Centre, Bengaluru</span>
                 </span>
                 <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/95 border border-white/40 shadow-xl hover:bg-white hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 ease-out">
                   <Award className="w-4 h-4 md:w-5 md:h-5 text-blue-600" />
-                  <span>M.Tech Microelectronics</span>
+                  <span>M.Tech Microelectronics, BITS, Pilani</span>
                 </span>
               </div>
             </motion.div>
