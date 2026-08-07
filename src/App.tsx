@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { About } from './components/About';
 import { CareerTimeline } from './components/CareerTimeline';
 import { TechnicalExpertise } from './components/TechnicalExpertise';
 import { Education } from './components/Education';
-import { Certifications } from './components/Certifications';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 
@@ -23,11 +21,9 @@ export function App() {
     const handleScroll = () => {
       const sections = [
         'hero',
-        'about',
         'expertise',
         'career',
         'education',
-        'certifications',
         'contact',
       ];
 
@@ -63,11 +59,9 @@ export function App() {
         <Hero
           onOpenContact={scrollToContact}
         />
-        <About />
         <TechnicalExpertise />
         <CareerTimeline />
         <Education />
-        <Certifications />
         <Contact />
       </main>
 

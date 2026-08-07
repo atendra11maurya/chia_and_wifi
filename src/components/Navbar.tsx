@@ -26,7 +26,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, activeSection }) 
   }, []);
 
   const navLinks = [
-    { label: 'About', href: '#about' },
     { label: 'Expertise', href: '#expertise' },
     { label: 'Career', href: '#career' },
     { label: 'Education', href: '#education' },

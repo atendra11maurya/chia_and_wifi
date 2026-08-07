@@ -10,9 +10,6 @@ export const Certifications: React.FC = () => {
 
         {/* Section Header */}
         <div className="flex flex-col items-start mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#EFF4FE] text-[#0F62FE] text-xs font-mono font-medium mb-3">
-            <span>05 // CERTIFICATIONS & CREDENTIALS</span>
-          </div>
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-3">
             Certifications & Vocational Training
           </h2>

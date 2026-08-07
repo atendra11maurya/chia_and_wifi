@@ -77,7 +77,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
                 <p>
                   Avinash Maurya is a Staff Engineer in Layout Design at Samsung Semiconductor India R&D Centre in Bengaluru, possessing over 8 years of specialized expertise in standard cell library layout development and physical verification methodology.
                 </p>
-                <p className="text-slate-500">
+                <p>
                   Having completed his M.Tech in Microelectronics from the prestigious BITS Pilani and having spent nearly 6 years at Synopsys
                 </p>
               </div>

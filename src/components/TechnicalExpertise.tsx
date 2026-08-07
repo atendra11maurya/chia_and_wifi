@@ -23,7 +23,7 @@ export const TechnicalExpertise: React.FC = () => {
             <span>02 // TECHNICAL EXPERTISE</span>
           </div>
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-3">
-            Core Competencies & Capabilities
+            Engineering Precision in Sub-Micron Silicon
           </h2>
           <p className="text-gray-600 text-base max-w-2xl">
             A comprehensive matrix of technical domains, specialized EDA toolsuites, and layout verification skills.
