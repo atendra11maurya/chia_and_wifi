@@ -69,7 +69,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
               <h2 className="font-heading text-[18px] md:text-2xl font-semibold text-[#0F62FE] mb-6 flex flex-wrap items-center justify-center lg:justify-start gap-2">
                 <span>{PERSONAL_INFO.title}</span>
                 <span className="text-slate-300 font-normal hidden md:inline">|</span>
-                <span className="text-slate-600 font-normal text-base md:text-xl hidden md:inline">Standard Cells & Physical Layout Architecture</span>
+                <span className="text-slate-600 font-normal text-base md:text-xl hidden md:inline">Standard Cells</span>
               </h2>
 
               {/* Core Value Proposition Paragraph */}
