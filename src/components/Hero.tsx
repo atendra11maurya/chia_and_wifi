@@ -60,40 +60,34 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
               className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left"
             >
 
-              {/* Large Name Headline with Subtle Metallic Gradient & Dynamic Tracking */}
-              <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.05] mb-4">
-                <span className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent">
-                  {PERSONAL_INFO.name}
-                </span>
+              {/* Large Name Headline */}
+              <h1 className="font-heading text-[36px] leading-[1.1] md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 mb-3 md:mb-4">
+                {PERSONAL_INFO.name}
               </h1>
 
-              {/* Professional Designation Subheading with Premium Blue Accent & Pill Divider */}
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-6">
-                <span className="font-heading text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#0F62FE] via-[#2563EB] to-[#1D4ED8] bg-clip-text text-transparent tracking-tight">
-                  {PERSONAL_INFO.title}
-                </span>
-                <span className="w-1.5 h-1.5 rounded-full bg-slate-300 hidden md:inline-block" />
-                <span className="text-slate-500 font-medium text-lg sm:text-xl md:text-2xl tracking-tight hidden md:inline-block">
-                  Standard Cells
-                </span>
-              </div>
+              {/* Professional Designation Subheading */}
+              <h2 className="font-heading text-[18px] md:text-2xl font-semibold text-[#0F62FE] mb-6 flex flex-wrap items-center justify-center lg:justify-start gap-2">
+                <span>{PERSONAL_INFO.title}</span>
+                <span className="text-slate-300 font-normal hidden md:inline">|</span>
+                <span className="text-slate-600 font-normal text-base md:text-xl hidden md:inline">Standard Cells</span>
+              </h2>
 
-              {/* Core Value Proposition Paragraph with Enhanced Font Weight, Size & Line-Height */}
-              <div className="max-w-[95%] md:max-w-3xl mb-8">
-                <p className="text-slate-600 text-lg sm:text-xl md:text-2xl font-normal leading-relaxed md:leading-[1.6] tracking-normal">
+              {/* Core Value Proposition Paragraph */}
+              <div className="text-slate-700 text-base md:text-xl font-medium leading-[1.7] md:leading-relaxed mb-7 md:mb-8 max-w-[95%] md:max-w-3xl">
+                <p>
                   Engineering high-performance standard cell libraries with a strong focus on layout precision, physical verification, and manufacturable silicon design.
                 </p>
               </div>
 
               {/* Key Quick Badge Tags */}
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 md:gap-5 text-base md:text-lg lg:text-xl font-bold text-slate-800 mt-2">
-                <span className="inline-flex items-center gap-3 px-7 py-4 rounded-full bg-white/95 border border-white/60 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.06)] hover:bg-white hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 ease-out">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 md:gap-5 text-base md:text-lg lg:text-xl font-bold text-slate-800 mt-4">
+                <span className="inline-flex items-center gap-3 px-7 py-4 rounded-full bg-white/95 border border-white/50 shadow-2xl hover:bg-white hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 ease-out">
                   <Cpu className="w-6 h-6 md:w-7 md:h-7 text-blue-600 shrink-0" />
-                  <span className="tracking-tight">{PERSONAL_INFO.company}, Bengaluru</span>
+                  <span>Samsung Semiconductor India R&D Centre, Bengaluru</span>
                 </span>
-                <span className="inline-flex items-center gap-3 px-7 py-4 rounded-full bg-white/95 border border-white/60 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.06)] hover:bg-white hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 ease-out">
+                <span className="inline-flex items-center gap-3 px-7 py-4 rounded-full bg-white/95 border border-white/50 shadow-2xl hover:bg-white hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 ease-out">
                   <Award className="w-6 h-6 md:w-7 md:h-7 text-blue-600 shrink-0" />
-                  <span className="tracking-tight">M.Tech – Microelectronics | BITS Pilani</span>
+                  <span>M.Tech – Microelectronics | BITS Pilani</span>
                 </span>
               </div>
             </motion.div>
