@@ -240,7 +240,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
   },
   {
     id: "synopsys-engr-2",
-    role: "Senior A&MS Layout Design Engineer",
+    role: "Senior Layout Design Engineer",
     company: "Synopsys Inc",
     companySlug: "synopsys",
     location: "Bengaluru, Karnataka, India",
